@@ -24342,7 +24342,7 @@ CAP-09321</description>
 <text x="149.86" y="114.3" size="2.54" layer="94" font="vector">ESP32 Thing Connections</text>
 <wire x1="78.74" y1="83.82" x2="78.74" y2="35.56" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="78.74" y1="35.56" x2="147.32" y2="35.56" width="0.1524" layer="97" style="shortdash"/>
-<text x="83.82" y="76.2" size="1.778" layer="94" font="vector">User controlled from GPIO 37</text>
+<text x="83.82" y="76.2" size="1.778" layer="94" font="vector">User controlled from GPIO 13</text>
 <text x="5.08" y="71.12" size="1.778" layer="94" font="vector">Use 3 pin JST for GP-20U7
 (SFE PN GPS-13740), or wire
 to 4 pin 0.1 inch header</text>
@@ -24358,23 +24358,23 @@ Accel/Gyro at addr:  0x6B</text>
 <instance part="LOGO1" gate="G$1" x="55.626" y="12.954"/>
 <instance part="LOGO3" gate="G$1" x="71.374" y="7.366"/>
 <instance part="B1" gate="G$1" x="198.12" y="76.2"/>
-<instance part="J2" gate="1" x="198.12" y="147.32"/>
+<instance part="J2" gate="1" x="193.04" y="147.32"/>
 <instance part="J1" gate="G$1" x="154.94" y="48.26"/>
 <instance part="J3" gate="G$1" x="241.3" y="106.68" rot="R180"/>
 <instance part="R3" gate="G$1" x="223.52" y="152.4"/>
 <instance part="R7" gate="G$1" x="233.68" y="147.32"/>
 <instance part="SUPPLY8" gate="G$1" x="43.18" y="63.5"/>
-<instance part="SUPPLY2" gate="G$1" x="177.8" y="160.02"/>
+<instance part="SUPPLY2" gate="G$1" x="172.72" y="160.02"/>
 <instance part="SUPPLY6" gate="G$1" x="241.3" y="160.02"/>
 <instance part="R1" gate="G$1" x="114.3" y="66.04" rot="R180"/>
 <instance part="GND3" gate="1" x="40.64" y="27.94"/>
 <instance part="GND4" gate="1" x="121.92" y="50.8"/>
-<instance part="GND5" gate="1" x="200.66" y="124.46"/>
+<instance part="GND5" gate="1" x="195.58" y="124.46"/>
 <instance part="GND6" gate="1" x="228.6" y="43.18"/>
 <instance part="GND7" gate="1" x="167.64" y="43.18"/>
 <instance part="U1" gate="G$1" x="83.82" y="119.38"/>
-<instance part="C4" gate="G$1" x="48.26" y="124.46" rot="MR0"/>
-<instance part="C5" gate="G$1" x="38.1" y="127" rot="MR0"/>
+<instance part="C4" gate="G$1" x="45.72" y="124.46" rot="MR0"/>
+<instance part="C5" gate="G$1" x="35.56" y="127" rot="MR0"/>
 <instance part="C6" gate="G$1" x="66.04" y="116.84" rot="MR0"/>
 <instance part="C7" gate="G$1" x="55.88" y="119.38" rot="MR0"/>
 <instance part="C8" gate="G$1" x="22.86" y="127" rot="MR0"/>
@@ -24386,8 +24386,8 @@ Accel/Gyro at addr:  0x6B</text>
 <instance part="R14" gate="G$1" x="106.68" y="142.24" rot="R90"/>
 <instance part="GND16" gate="1" x="55.88" y="99.06"/>
 <instance part="GND18" gate="1" x="66.04" y="99.06"/>
-<instance part="GND19" gate="1" x="48.26" y="99.06"/>
-<instance part="GND20" gate="1" x="38.1" y="99.06"/>
+<instance part="GND19" gate="1" x="45.72" y="99.06"/>
+<instance part="GND20" gate="1" x="35.56" y="99.06"/>
 <instance part="GND21" gate="1" x="22.86" y="99.06"/>
 <instance part="SUPPLY9" gate="G$1" x="101.6" y="160.02"/>
 <instance part="SUPPLY10" gate="G$1" x="106.68" y="160.02"/>
@@ -24395,7 +24395,7 @@ Accel/Gyro at addr:  0x6B</text>
 <instance part="SUPPLY13" gate="G$1" x="116.84" y="160.02"/>
 <instance part="SUPPLY14" gate="G$1" x="121.92" y="160.02"/>
 <instance part="SUPPLY15" gate="G$1" x="127" y="160.02"/>
-<instance part="SUPPLY16" gate="G$1" x="55.88" y="142.24"/>
+<instance part="SUPPLY16" gate="G$1" x="45.72" y="139.7"/>
 <instance part="TP1" gate="G$1" x="116.84" y="116.84" smashed="yes">
 <attribute name="NAME" x="121.92" y="116.84" size="1.778" layer="95" font="vector" align="center-left"/>
 </instance>
@@ -24420,8 +24420,8 @@ Accel/Gyro at addr:  0x6B</text>
 <instance part="R4" gate="G$1" x="165.1" y="157.48" rot="R90"/>
 <instance part="SUPPLY1" gate="G$1" x="160.02" y="172.72"/>
 <instance part="SUPPLY3" gate="G$1" x="165.1" y="165.1"/>
-<instance part="SUPPLY4" gate="G$1" x="38.1" y="142.24"/>
-<instance part="SUPPLY5" gate="G$1" x="22.86" y="142.24"/>
+<instance part="SUPPLY4" gate="G$1" x="35.56" y="139.7"/>
+<instance part="SUPPLY5" gate="G$1" x="22.86" y="139.7"/>
 <instance part="SUPPLY7" gate="G$1" x="223.52" y="139.7"/>
 <instance part="R5" gate="G$1" x="223.52" y="132.08" rot="R90"/>
 </instances>
@@ -24446,9 +24446,9 @@ Accel/Gyro at addr:  0x6B</text>
 <pinref part="J6" gate="J$1" pin="1"/>
 </segment>
 <segment>
-<wire x1="177.8" y1="152.4" x2="177.8" y2="160.02" width="0.1524" layer="91"/>
+<wire x1="172.72" y1="152.4" x2="172.72" y2="160.02" width="0.1524" layer="91"/>
 <pinref part="J2" gate="1" pin="VCC"/>
-<wire x1="177.8" y1="152.4" x2="182.88" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="172.72" y1="152.4" x2="177.8" y2="152.4" width="0.1524" layer="91"/>
 <pinref part="SUPPLY2" gate="G$1" pin="3.3V"/>
 </segment>
 <segment>
@@ -24504,28 +24504,25 @@ Accel/Gyro at addr:  0x6B</text>
 <segment>
 <pinref part="U1" gate="G$1" pin="VDD"/>
 <pinref part="C5" gate="G$1" pin="1"/>
-<wire x1="38.1" y1="134.62" x2="68.58" y2="134.62" width="0.1524" layer="91"/>
-<wire x1="38.1" y1="132.08" x2="38.1" y2="134.62" width="0.1524" layer="91"/>
-<wire x1="38.1" y1="134.62" x2="38.1" y2="142.24" width="0.1524" layer="91"/>
-<junction x="38.1" y="134.62"/>
-<label x="45.72" y="134.62" size="1.27" layer="95" font="vector"/>
+<wire x1="35.56" y1="134.62" x2="68.58" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="35.56" y1="132.08" x2="35.56" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="35.56" y1="134.62" x2="35.56" y2="139.7" width="0.1524" layer="91"/>
+<junction x="35.56" y="134.62"/>
 <pinref part="SUPPLY4" gate="G$1" pin="3.3V"/>
 </segment>
 <segment>
 <pinref part="C8" gate="G$1" pin="1"/>
-<wire x1="22.86" y1="132.08" x2="22.86" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="132.08" x2="22.86" y2="139.7" width="0.1524" layer="91"/>
 <pinref part="SUPPLY5" gate="G$1" pin="3.3V"/>
 </segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="VDDIO"/>
 <pinref part="C4" gate="G$1" pin="1"/>
-<wire x1="48.26" y1="129.54" x2="48.26" y2="132.08" width="0.1524" layer="91"/>
-<wire x1="48.26" y1="132.08" x2="55.88" y2="132.08" width="0.1524" layer="91"/>
-<wire x1="55.88" y1="132.08" x2="68.58" y2="132.08" width="0.1524" layer="91"/>
-<junction x="55.88" y="132.08"/>
-<label x="58.42" y="132.08" size="1.27" layer="95" font="vector"/>
+<wire x1="45.72" y1="129.54" x2="45.72" y2="132.08" width="0.1524" layer="91"/>
+<wire x1="45.72" y1="132.08" x2="68.58" y2="132.08" width="0.1524" layer="91"/>
+<junction x="45.72" y="132.08"/>
 <pinref part="SUPPLY16" gate="G$1" pin="3.3V"/>
-<wire x1="55.88" y1="132.08" x2="55.88" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="45.72" y1="132.08" x2="45.72" y2="139.7" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="J1" gate="G$1" pin="5"/>
@@ -24556,17 +24553,17 @@ Accel/Gyro at addr:  0x6B</text>
 <pinref part="GND4" gate="1" pin="GND"/>
 </segment>
 <segment>
-<wire x1="200.66" y1="132.08" x2="200.66" y2="129.54" width="0.1524" layer="91"/>
-<pinref part="J2" gate="1" pin="GND"/>
-<junction x="200.66" y="129.54"/>
-<wire x1="200.66" y1="129.54" x2="200.66" y2="127" width="0.1524" layer="91"/>
-<pinref part="J2" gate="1" pin="SHIELD@1"/>
 <wire x1="195.58" y1="132.08" x2="195.58" y2="129.54" width="0.1524" layer="91"/>
-<wire x1="195.58" y1="129.54" x2="198.12" y2="129.54" width="0.1524" layer="91"/>
+<pinref part="J2" gate="1" pin="GND"/>
+<junction x="195.58" y="129.54"/>
+<wire x1="195.58" y1="129.54" x2="195.58" y2="127" width="0.1524" layer="91"/>
+<pinref part="J2" gate="1" pin="SHIELD@1"/>
+<wire x1="190.5" y1="132.08" x2="190.5" y2="129.54" width="0.1524" layer="91"/>
+<wire x1="190.5" y1="129.54" x2="193.04" y2="129.54" width="0.1524" layer="91"/>
 <pinref part="J2" gate="1" pin="SHIELD@3"/>
-<wire x1="198.12" y1="129.54" x2="200.66" y2="129.54" width="0.1524" layer="91"/>
-<wire x1="198.12" y1="132.08" x2="198.12" y2="129.54" width="0.1524" layer="91"/>
-<junction x="198.12" y="129.54"/>
+<wire x1="193.04" y1="129.54" x2="195.58" y2="129.54" width="0.1524" layer="91"/>
+<wire x1="193.04" y1="132.08" x2="193.04" y2="129.54" width="0.1524" layer="91"/>
+<junction x="193.04" y="129.54"/>
 <pinref part="GND5" gate="1" pin="GND"/>
 </segment>
 <segment>
@@ -24635,12 +24632,12 @@ Accel/Gyro at addr:  0x6B</text>
 </segment>
 <segment>
 <pinref part="C4" gate="G$1" pin="2"/>
-<wire x1="48.26" y1="101.6" x2="48.26" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="45.72" y1="101.6" x2="45.72" y2="121.92" width="0.1524" layer="91"/>
 <pinref part="GND19" gate="1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="C5" gate="G$1" pin="2"/>
-<wire x1="38.1" y1="101.6" x2="38.1" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="35.56" y1="101.6" x2="35.56" y2="124.46" width="0.1524" layer="91"/>
 <pinref part="GND20" gate="1" pin="GND"/>
 </segment>
 <segment>
@@ -24651,7 +24648,7 @@ Accel/Gyro at addr:  0x6B</text>
 </net>
 <net name="SD_CS" class="0">
 <segment>
-<wire x1="182.88" y1="149.86" x2="160.02" y2="149.86" width="0.1524" layer="91"/>
+<wire x1="177.8" y1="149.86" x2="160.02" y2="149.86" width="0.1524" layer="91"/>
 <label x="157.48" y="149.86" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 <pinref part="J2" gate="1" pin="!CS"/>
 <pinref part="R2" gate="G$1" pin="1"/>
@@ -24670,7 +24667,7 @@ Accel/Gyro at addr:  0x6B</text>
 <segment>
 <label x="175.26" y="147.32" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 <pinref part="J2" gate="1" pin="DI"/>
-<wire x1="175.26" y1="147.32" x2="182.88" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="175.26" y1="147.32" x2="177.8" y2="147.32" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="B1" gate="G$1" pin="23"/>
@@ -24683,7 +24680,7 @@ Accel/Gyro at addr:  0x6B</text>
 <segment>
 <label x="175.26" y="144.78" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 <pinref part="J2" gate="1" pin="SCK"/>
-<wire x1="175.26" y1="144.78" x2="182.88" y2="144.78" width="0.1524" layer="91"/>
+<wire x1="175.26" y1="144.78" x2="177.8" y2="144.78" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="B1" gate="G$1" pin="18"/>
@@ -24698,7 +24695,7 @@ Accel/Gyro at addr:  0x6B</text>
 <pinref part="J2" gate="1" pin="DO"/>
 <wire x1="157.48" y1="142.24" x2="165.1" y2="142.24" width="0.1524" layer="91"/>
 <pinref part="R4" gate="G$1" pin="1"/>
-<wire x1="165.1" y1="142.24" x2="182.88" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="142.24" x2="177.8" y2="142.24" width="0.1524" layer="91"/>
 <wire x1="165.1" y1="152.4" x2="165.1" y2="142.24" width="0.1524" layer="91"/>
 <junction x="165.1" y="142.24"/>
 </segment>
@@ -24858,14 +24855,14 @@ Accel/Gyro at addr:  0x6B</text>
 <segment>
 <pinref part="J2" gate="1" pin="RSV@1"/>
 <pinref part="R3" gate="G$1" pin="1"/>
-<wire x1="215.9" y1="152.4" x2="218.44" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="210.82" y1="152.4" x2="218.44" y2="152.4" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$10" class="0">
 <segment>
 <pinref part="J2" gate="1" pin="RSV@2"/>
 <pinref part="R7" gate="G$1" pin="1"/>
-<wire x1="215.9" y1="147.32" x2="228.6" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="210.82" y1="147.32" x2="228.6" y2="147.32" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="CAP" class="0">
@@ -25033,9 +25030,9 @@ Accel/Gyro at addr:  0x6B</text>
 <net name="SD_CD" class="0">
 <segment>
 <pinref part="J2" gate="1" pin="CD2"/>
-<wire x1="215.9" y1="137.16" x2="218.44" y2="137.16" width="0.1524" layer="91"/>
-<wire x1="218.44" y1="137.16" x2="218.44" y2="124.46" width="0.1524" layer="91"/>
-<wire x1="218.44" y1="124.46" x2="223.52" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="210.82" y1="137.16" x2="213.36" y2="137.16" width="0.1524" layer="91"/>
+<wire x1="213.36" y1="137.16" x2="213.36" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="213.36" y1="124.46" x2="223.52" y2="124.46" width="0.1524" layer="91"/>
 <label x="228.6" y="124.46" size="1.27" layer="95" font="vector" xref="yes"/>
 <pinref part="R5" gate="G$1" pin="1"/>
 <wire x1="223.52" y1="124.46" x2="228.6" y2="124.46" width="0.1524" layer="91"/>
