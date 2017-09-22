@@ -24052,14 +24052,34 @@ CAP-09321</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="LSM9DS1_temp">
+<library name="SparkFun-Sensors">
+<description>&lt;h3&gt;SparkFun Sensors&lt;/h3&gt;
+This library contains sensors- accelerometers, gyros, compasses, magnetometers, light sensors, imagers, temp sensors, etc.
+&lt;br&gt;
+&lt;br&gt;
+We've spent an enormous amount of time creating and checking these footprints and parts, but it is &lt;b&gt; the end user's responsibility&lt;/b&gt; to ensure correctness and suitablity for a given componet or application. 
+&lt;br&gt;
+&lt;br&gt;If you enjoy using this library, please buy one of our products at &lt;a href=" www.sparkfun.com"&gt;SparkFun.com&lt;/a&gt;.
+&lt;br&gt;
+&lt;br&gt;
+&lt;b&gt;Licensing:&lt;/b&gt; Creative Commons ShareAlike 4.0 International - https://creativecommons.org/licenses/by-sa/4.0/ 
+&lt;br&gt;
+&lt;br&gt;
+You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
 <packages>
-<package name="LGA24-8X4">
-<description>&lt;h3&gt;24-pin LGA 8x4 pins&lt;/h3&gt;
-&lt;p&gt;Footprint: 3.5 x 3mm&lt;/p&gt;
-&lt;p&gt;Used by:
-&lt;ul&gt;&lt;li&gt;LSM9DS1&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Unproven&lt;/em&gt;&lt;/p&gt;</description>
+<package name="LGA-24-3.5X3">
+<description>&lt;h3&gt;24-pin LGA (3.5 x 3 mm)&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://cdn.sparkfun.com/assets/learn_tutorials/3/7/3/LSM9DS1_Datasheet.pdf"&gt;Datasheet&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Specifications:
+&lt;ul&gt;
+&lt;li&gt;Pin Count: 24&lt;/li&gt;
+&lt;li&gt;Area: 3.5 x 3.0 mm&lt;/li&gt;
+&lt;li&gt;Pitch: 0.43 mm&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Devices Using:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;LSM9DS1&lt;/li&gt;
+&lt;/ul&gt;</description>
 <wire x1="-1.75" y1="-1.5" x2="-1.75" y2="1.5" width="0.0508" layer="51"/>
 <wire x1="-1.75" y1="1.5" x2="1.75" y2="1.5" width="0.0508" layer="51"/>
 <wire x1="1.75" y1="1.5" x2="1.75" y2="-1.5" width="0.0508" layer="51"/>
@@ -24117,8 +24137,6 @@ CAP-09321</description>
 <wire x1="1.85" y1="1.6" x2="1.85" y2="-1.6" width="0.1016" layer="21"/>
 <wire x1="1.85" y1="-1.6" x2="-1.85" y2="-1.6" width="0.1016" layer="21"/>
 <wire x1="-1.85" y1="-1.6" x2="-1.85" y2="1.6" width="0.1016" layer="21"/>
-<text x="-1.778" y="1.778" size="0.8128" layer="25">&gt;Name</text>
-<text x="-1.778" y="-1.778" size="0.8128" layer="27" align="top-left">&gt;Value</text>
 <wire x1="-0.567" y1="-0.432" x2="-0.567" y2="0.556" width="0.0762" layer="51"/>
 <wire x1="0.425" y1="0.556" x2="-0.567" y2="0.556" width="0.0762" layer="51"/>
 <wire x1="0.425" y1="0.556" x2="0.275" y2="0.706" width="0.0762" layer="51"/>
@@ -24162,21 +24180,14 @@ CAP-09321</description>
 <wire x1="-1.7" y1="0.86" x2="-1.2" y2="0.86" width="0.0508" layer="41"/>
 <wire x1="1.7" y1="0.86" x2="1.2" y2="0.86" width="0.0508" layer="41"/>
 <wire x1="1.7" y1="-0.86" x2="1.2" y2="-0.86" width="0.0508" layer="41"/>
+<text x="0" y="1.778" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-1.778" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
 </package>
 </packages>
 <symbols>
 <symbol name="LSM9DS1">
-<description>&lt;h3&gt;LSM9DS1 3D accelerometer, gyroscope &amp; magnetometer&lt;/h3&gt;
-
-&lt;p&gt;The LSM9DS1 is a system-in-package featuring a 3D digital linear acceleration sensor, a 3D digital angular rate sensor, and a 3D digital magnetic sensor.&lt;/p&gt;
-
-&lt;p&gt;The LSM9DS1 has a linear acceleration full scale of ±2g/±4g/±8/±16 g, a magnetic field full scale of ±4/±8/±12/±16 gauss and an angular rate of ±245/±500/±2000 dps.&lt;/p&gt;
-
-&lt;p&gt;The LSM9DS1 includes an I&lt;sup&gt;2&lt;/sup&gt; C serial bus interface supporting standard and fast mode (100 kHz and 400 kHz) and an SPI serial standard interface.&lt;/p&gt;
-
-&lt;p&gt;Magnetic, accelerometer and gyroscope sensing can be enabled or set in power-down mode separately for smart power management.&lt;/p&gt;
-
-&lt;p&gt;The LSM9DS1 is available in a plastic land grid array package (LGA) and it is guaranteed to operate over an extended temperature range from -40 °C to +85 °C.&lt;/p&gt;</description>
+<description>&lt;h3&gt;ST Microelectronics LSM9DS1 9DOF IMU - Accelerometer, Gyroscope &amp; Magnetometer&lt;/h3&gt;
+&lt;p&gt;The LSM9DS1 is a versatile, motion-sensing system-in-a-chip. It houses a 3-axis accelerometer, 3-axis gyroscope, and 3-axis magnetometer – nine degrees of freedom (9DOF) in a single IC! The LSM9DS1 is equipped with a digital interface, but even that is flexible: it supports both I2C and SPI, so you’ll be hard-pressed to find a microcontroller it doesn’t work with.&lt;/p&gt;</description>
 <pin name="GND" x="-15.24" y="-15.24" length="short"/>
 <pin name="C1" x="-15.24" y="5.08" length="short"/>
 <pin name="CAP" x="-15.24" y="7.62" length="short"/>
@@ -24197,29 +24208,26 @@ CAP-09321</description>
 <wire x1="-12.7" y1="-17.78" x2="12.7" y2="-17.78" width="0.254" layer="94"/>
 <wire x1="12.7" y1="-17.78" x2="12.7" y2="17.78" width="0.254" layer="94"/>
 <wire x1="12.7" y1="17.78" x2="-12.7" y2="17.78" width="0.254" layer="94"/>
-<text x="-12.7" y="-19.05" size="1.778" layer="96" align="center-left">&gt;Value</text>
-<text x="-12.7" y="19.05" size="1.778" layer="95" align="center-left">&gt;Name</text>
-<pin name="RES" x="-15.24" y="-12.7" length="short"/>
+<pin name="RSVD" x="-15.24" y="-12.7" length="short"/>
+<text x="-12.7" y="18.034" size="1.778" layer="95" font="vector">&gt;Name</text>
+<text x="-12.7" y="-18.034" size="1.778" layer="96" font="vector" align="top-left">&gt;Value</text>
 </symbol>
 </symbols>
 <devicesets>
 <deviceset name="LSM9DS1" prefix="U">
-<description>&lt;h3&gt;LSM9DS1 3D accelerometer, gyroscope &amp; magnetometer&lt;/h3&gt;
-
-&lt;p&gt;The LSM9DS1 is a system-in-package featuring a 3D digital linear acceleration sensor, a 3D digital angular rate sensor, and a 3D digital magnetic sensor.&lt;/p&gt;
-
-&lt;p&gt;The LSM9DS1 has a linear acceleration full scale of ±2g/±4g/±8/±16 g, a magnetic field full scale of ±4/±8/±12/±16 gauss and an angular rate of ±245/±500/±2000 dps.&lt;/p&gt;
-
-&lt;p&gt;The LSM9DS1 includes an I&lt;sup&gt;2&lt;/sup&gt; C serial bus interface supporting standard and fast mode (100 kHz and 400 kHz) and an SPI serial standard interface.&lt;/p&gt;
-
-&lt;p&gt;Magnetic, accelerometer and gyroscope sensing can be enabled or set in power-down mode separately for smart power management.&lt;/p&gt;
-
-&lt;p&gt;The LSM9DS1 is available in a plastic land grid array package (LGA) and it is guaranteed to operate over an extended temperature range from -40 °C to +85 °C.&lt;/p&gt;</description>
+<description>&lt;h3&gt;ST Microelectronics LSM9DS1 9DOF IMU - Accelerometer, Gyroscope &amp; Magnetometer&lt;/h3&gt;
+&lt;p&gt;The LSM9DS1 is a versatile, motion-sensing system-in-a-chip. It houses a 3-axis accelerometer, 3-axis gyroscope, and 3-axis magnetometer – nine degrees of freedom (9DOF) in a single IC! The LSM9DS1 is equipped with a digital interface, but even that is flexible: it supports both I2C and SPI, so you’ll be hard-pressed to find a microcontroller it doesn’t work with.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://cdn.sparkfun.com/assets/learn_tutorials/3/7/3/LSM9DS1_Datasheet.pdf"&gt;Datasheet&lt;/a&gt;&lt;/p&gt;
+&lt;h4&gt;SparkFun Products&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.sparkfun.com/products/13284"&gt;SparkFun 9 Degrees of Freedom IMU Breakout - LSM9DS1&lt;/a&gt; (SEN-13284)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.sparkfun.com/products/13629"&gt;SparkFun Photon IMU Shield&lt;/a&gt; (DEV-13629)&lt;/li&gt;
+&lt;/ul&gt;</description>
 <gates>
 <gate name="G$1" symbol="LSM9DS1" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="LGA24-8X4">
+<device name="" package="LGA-24-3.5X3">
 <connects>
 <connect gate="G$1" pin="C1" pad="24"/>
 <connect gate="G$1" pin="CAP" pad="21"/>
@@ -24231,7 +24239,7 @@ CAP-09321</description>
 <connect gate="G$1" pin="INT1_A/G" pad="11"/>
 <connect gate="G$1" pin="INT2_A/G" pad="12"/>
 <connect gate="G$1" pin="INT_M" pad="10"/>
-<connect gate="G$1" pin="RES" pad="14 15 16 17 18"/>
+<connect gate="G$1" pin="RSVD" pad="14 15 16 17 18"/>
 <connect gate="G$1" pin="SCL/SPC" pad="2"/>
 <connect gate="G$1" pin="SDA/SDI/SDO" pad="4"/>
 <connect gate="G$1" pin="SDO_A/G" pad="5"/>
@@ -24280,7 +24288,7 @@ CAP-09321</description>
 <part name="GND5" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="GND6" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="GND7" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="U1" library="LSM9DS1_temp" deviceset="LSM9DS1" device=""/>
+<part name="U1" library="SparkFun-Sensors" deviceset="LSM9DS1" device=""/>
 <part name="C4" library="SparkFun-Capacitors" deviceset="0.1UF" device="-0402-16V-10%" value="0.1uF"/>
 <part name="C5" library="SparkFun-Capacitors" deviceset="0.1UF" device="-0402-16V-10%" value="0.1uF"/>
 <part name="C6" library="SparkFun-Capacitors" deviceset="0.1UF" device="-0402-16V-10%" value="0.1uF"/>
@@ -24618,7 +24626,7 @@ Accel/Gyro at addr:  0x6B</text>
 <pinref part="GND16" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="RES"/>
+<pinref part="U1" gate="G$1" pin="RSVD"/>
 <wire x1="68.58" y1="106.68" x2="66.04" y2="106.68" width="0.1524" layer="91"/>
 <wire x1="66.04" y1="106.68" x2="66.04" y2="104.14" width="0.1524" layer="91"/>
 <pinref part="U1" gate="G$1" pin="GND"/>
@@ -25091,6 +25099,11 @@ Accel/Gyro at addr:  0x6B</text>
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="113,1,161.883,77.3853,J1,,,,,"/>
+<approved hash="113,1,234.357,77.5547,J3,,,,,"/>
+<approved hash="113,1,56.5573,38.0323,J4,,,,,"/>
+</errors>
 </schematic>
 </drawing>
 <compatibility>
