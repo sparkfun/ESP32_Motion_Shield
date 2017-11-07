@@ -6,7 +6,7 @@ void setup()
   Serial.begin(115200);
   Serial1.begin(9600);
   delay(1000);
-  Serial.println("Weeee!");
+  Serial.println("Sketch Started.");
 }
 
 void loop() {

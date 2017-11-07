@@ -1,3 +1,44 @@
+/******************************************************************************
+FileSerialExample.ino
+Example Serial-like file writer
+
+Marshall Taylor @ SparkFun Electronics
+original creation date: Nov 6, 2017
+https://github.com/sparkfun/ESP32_Motion_Shield
+
+This example demonstrates usage of the FileSerial library.
+
+The FileSerial libary implements the ESP32 SD_Test functions as a class that acts like a
+HardwareSerial device.  It has been modeled from the ESP32 Arduino core's
+HardwareSerial class, but takes no input streams from the user.
+
+There are a couple extra functions that aren't normally found in a serial device
+
+	int startLog( const char * inputPath, const char * inputStub );
+	int stopLog( void );
+	void setMaxFileSize( int32_t inputSize );
+	void setWriteBufferSize( uint8_t inputSize );
+
+Construct with an optional serial device address, such as
+
+	FileSerial ExampleFileSet(&Serial);
+
+Doing so logs SD read/write information plus written data to the passed serial port.
+
+Resources:
+  FileSerial.h
+  FileSerial.cpp
+
+Development environment specifics:
+  IDE: Arduino 1.8.2
+  ESP32 Arduino core
+  
+This code is released under the [MIT License](http://opensource.org/licenses/MIT).
+Please review the LICENSE.md file included with this example. If you have any questions 
+or concerns with licensing, please contact techsupport@sparkfun.com.
+Distributed as-is; no warranty is given.
+******************************************************************************/
+
 #include <Arduino.h>
 #include "FileSerial.h"
 
@@ -33,6 +74,10 @@ void setup(){
 	
 	//Start a batch of log files with startLog,
 	//pass directory name and file name.
+	//
+	//If directoy is path, parent directories must exist!
+	//"[existing directory]/[new directory]" is valid
+	//"[new directory]/[new directory]" is not
 	ExampleFileSet.startLog("testFiles", "file");
 }
 

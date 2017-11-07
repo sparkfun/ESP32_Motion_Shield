@@ -1,33 +1,40 @@
 /******************************************************************************
-CSV_Output.ino
-BME280 Arduino and Teensy example
-Marshall Taylor @ SparkFun Electronics
-May 20, 2015
-https://github.com/sparkfun/SparkFun_BME280_Arduino_Library
+BME280_I2C_SPI.ino
+BME280 on the ESP32 Thing
 
-This sketch configures two BME280 to produce comma separated values for use
+Marshall Taylor @ SparkFun Electronics
+Original creation date: May 20, 2015
+Modified: Nov 6, 2017
+https://github.com/sparkfun/ESP32_Motion_Shield
+
+This sketch configures a BME280 to produce comma separated values for use
 in generating spreadsheet graphs.
-in 10 being used for chip select.
+
+It has been modified from the original BME280 example to demonstrate I2C and
+SPI operation on the ESP32 Motion board.
+
+Original source:
+https://github.com/sparkfun/SparkFun_BME280_Arduino_Library
 
 Resources:
 Uses Wire.h for I2C operation
 Uses SPI.h for SPI operation
 
 Development environment specifics:
-Arduino IDE 1.6.4
-Teensy loader 1.23
+Arduino IDE 1.8.2
 
 This code is released under the [MIT License](http://opensource.org/licenses/MIT).
 Please review the LICENSE.md file included with this example. If you have any questions 
 or concerns with licensing, please contact techsupport@sparkfun.com.
 Distributed as-is; no warranty is given.
 ******************************************************************************/
-
 #include <stdint.h>
 #include "SparkFunBME280.h"
 
 #include "Wire.h"
 #include "SPI.h"
+
+#define BME280_CS_PIN 17
 
 //Global sensor object
 BME280 mySensor;
@@ -37,17 +44,17 @@ unsigned int sampleNumber = 0; //For counting number of CSV rows
 void setup()
 {
 	//***Driver settings********************************//
-	//commInterface can be I2C_MODE or SPI_MODE
-	//specify chipSelectPin using arduino pin names
-	//specify I2C address.  Can be 0x77(default) or 0x76
+	//  commInterface can be I2C_MODE or SPI_MODE.
+		
+	//For I2C, enable the following and disable the SPI section.
+	//I2CAddress can be 0x77(default) or 0x76.
+	//mySensor.settings.commInterface = I2C_MODE;
+	//mySensor.settings.I2CAddress = 0x77;	
 	
-	//For I2C, enable the following and disable the SPI section
+	//For SPI enable the following and dissable the I2C section.
+	//set chipSelectPin using arduino pin names.
 	mySensor.settings.commInterface = SPI_MODE;
-	mySensor.settings.chipSelectPin = 14;
-	
-	//For SPI enable the following and dissable the I2C section
-	//mySensor.settings.commInterface = SPI_MODE;
-	//mySensor.settings.chipSelectPin = 10;
+	mySensor.settings.chipSelectPin = BME280_CS_PIN;
 
 
 	//***Operation settings*****************************//
