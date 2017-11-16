@@ -1,41 +1,30 @@
 SparkFun <PRODUCT NAME>
 ========================================
 
-![SparkFun Part Name](URL for picture of part)
+![ESP32 Thing Motion Shield](https://cdn.sparkfun.com/assets/parts/1/2/4/5/8/14430-01.jpg)
 
-[*SparkFun Part Name (SKU)*](URL for product on Sparkfun.com)
-
-<Basic description of the part.>
+The [ESP32 Thing Motion Shield](https://www.sparkfun.com/products/14430) is a versatile addition to our [ESP32 Thing](https://www.sparkfun.com/products/13907).  Small movements can be detected with the tried and true LSM9DS1 IMU, large movements and time can be detected with the addition of a GPS sensor.  There's a port for the [GP-20U7](https://www.sparkfun.com/products/13740) module, and breakout pins for any serial device.  Data can be easily logged by adding an microSD card to the slot.  There is also an additional user led on pin 13.
 
 Repository Contents
 -------------------
 
-* **/Documentation** - Data sheets, additional product information
-* **/Enclosure** - Enclosure files 
-* **/Firmware** - Example code 
+* **/Documentation** - Test plan and record.
 * **/Hardware** - Eagle design files (.brd, .sch)
-* **/Libraries** - Libraries for use with the <PRODUCT NAME>
 * **/Production** - Production panel files (.brd)
-* **/Software** - Related software for the <PRODUCT NAME>
+* **/Software** - Example programs for the ESP32 that can support functions of the Motion Shield.  These are used in the hookup guide.
 
 Documentation
 --------------
-* **[Library](GitHub library URL)** - <LANGUAGE> library for the <PRODUCT NAME>.
-* **[Hookup Guide](Learn.SparkFun URL)** - Basic hookup guide for the <PRODUCT NAME>.
-* **[SparkFun Fritzing repo](https://github.com/sparkfun/Fritzing_Parts)** - Fritzing diagrams for SparkFun products.
-* **[SparkFun 3D Model repo](https://github.com/sparkfun/3D_Models)** - 3D models of SparkFun products. 
-* **[SparkFun Graphical Datasheets](https://github.com/sparkfun/Graphical_Datasheets)** -Graphical Datasheets for various SparkFun products.
+* **[Motion Shield Hookup Guide](https://learn.sparkfun.com/tutorials/esp32-thing-motion-shield-hookup-guide)** - Basic hookup guide for the ESP32 Motion Shield.
+* **[ESP32 Hookup Guide](https://learn.sparkfun.com/tutorials/esp32-thing-hookup-guide)** - Basic hookup guide for the ESP32 Thing.
 
 Product Versions
 ----------------
-* [Part SKU](part URL)- Basic part and short description here
-* [Retail part SKU] (retail URL)- Retail packaging of standard description here
-* [Any other parts this repo covers](any other URLs) - Description of said parts
+* [DEV-14430](https://www.sparkfun.com/products/14430) - ESP32 Motion Shield
 
 Version History
 ---------------
-* [vExxFxxZxxHxxLxxSxx](URL for tag specific to this version) - Description 
-* [vEyyFyyZyyHyyLyySyy](URL for tag specific to this version) - Description
+* [V_1.0.0](https://github.com/sparkfun/ESP32_Motion_Shield/tree/V_1.0.0) - Product release.
 
 License Information
 -------------------
@@ -49,5 +38,3 @@ If you have any questions or concerns on licensing, please contact techsupport@s
 Distributed as-is; no warranty is given.
 
 - Your friends at SparkFun.
-
-_<COLLABORATION CREDIT>_
