@@ -48,17 +48,6 @@ char csvBuffer[300];
 void setup() 
 {
   Serial.begin(115200);
-  
-  // Configure LSM9DS1 library parameters
-  /*imu.settings.device.commInterface = IMU_MODE_I2C;
-  imu.settings.device.mAddress = LSM9DS1_M;
-  imu.settings.device.agAddress = LSM9DS1_AG;
-  imu.settings.mag.scale = 2;*/
-  // The above lines will only take effect AFTER calling
-  // imu.begin(), which verifies communication with the IMU
-  // and turns it on.
- 
- 
   delay(1000);
   Serial.println("Starting Sketch");
 
