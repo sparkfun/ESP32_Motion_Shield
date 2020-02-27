@@ -1,6 +1,6 @@
-SparkFun <PRODUCT NAME> Software
+SparkFun ESP32 Motion Shield Software
 =================================
 
-Example software for use with <PRODUCT NAME>.
+Example software for use with SparkFun ESP32 Motion Shield.
 
-Possible examples include python scripts, bash scripts, SPICE simulations, etc. 
+LSM9DS1 and BME280 libraries need to be installed to work.
