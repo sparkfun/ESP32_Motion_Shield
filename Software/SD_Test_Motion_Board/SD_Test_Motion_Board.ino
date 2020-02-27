@@ -1,5 +1,5 @@
 /*****************************************************************
-LSM9DS1_CSV.ino
+SD_Test_Motion_Board.ino
 
 This is a modified version of the SD_Test example sketch
 included with the Arduino core for the esp32, from

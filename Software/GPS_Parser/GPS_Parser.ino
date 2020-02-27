@@ -1,5 +1,5 @@
 /******************************************************************************
-GPS_Parser.h
+GPS_Parser.ino
 Simple delimiter and valid data detector
 
 Marshall Taylor @ SparkFun Electronics

@@ -1,21 +1,19 @@
 /******************************************************************************
-CSV_Output.ino
-BME280 Arduino and Teensy example
+BMEIMU.ino
+ESP32 Motion Shield & BME280 Example
 Marshall Taylor @ SparkFun Electronics
 May 20, 2015
 https://github.com/sparkfun/SparkFun_BME280_Arduino_Library
 
-This sketch configures two BME280 to produce comma separated values for use
+This sketch configures the LSM9DS1 on the ESP32 Motion Shield along with a BME280 to produce comma separated values for use
 in generating spreadsheet graphs.
-in 10 being used for chip select.
+
 
 Resources:
 Uses Wire.h for I2C operation
-Uses SPI.h for SPI operation
 
 Development environment specifics:
 Arduino IDE 1.6.4
-Teensy loader 1.23
 
 This code is released under the [MIT License](http://opensource.org/licenses/MIT).
 Please review the LICENSE.md file included with this example. If you have any questions 
