@@ -24,7 +24,9 @@ Product Versions
 
 Version History
 ---------------
+* [V_1.0.0a](https://github.com/sparkfun/ESP32_Motion_Shield/releases/tag/v1.0.0a) - Software Update.
 * [V_1.0.0](https://github.com/sparkfun/ESP32_Motion_Shield/tree/V_1.0.0) - Product release.
+
 
 License Information
 -------------------
