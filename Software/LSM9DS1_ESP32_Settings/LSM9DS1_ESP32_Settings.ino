@@ -50,14 +50,6 @@ unsigned int tempReadCounter = 0;
 unsigned long lastPrint = 0;
 const unsigned int PRINT_RATE = 500;
 
-void setupDevice()
-{
-  // Use IMU_MODE_I2C
-  imu.settings.device.commInterface = IMU_MODE_I2C;
-  imu.settings.device.mAddress = LSM9DS1_M;
-  imu.settings.device.agAddress = LSM9DS1_AG;
-}
-
 void setupGyro()
 {
   // [enabled] turns the gyro on or off.
@@ -173,18 +165,19 @@ void setupTemperature()
 
 uint16_t initLSM9DS1()
 {
-  setupDevice(); // Setup general device parameters
   setupGyro(); // Set up gyroscope parameters
   setupAccel(); // Set up accelerometer parameters
   setupMag(); // Set up magnetometer parameters
   setupTemperature(); // Set up temp sensor parameter
   
-  return imu.begin();
+  return imu.begin(LSM9DS1_AG, LSM9DS1_M, Wire); 
 }
 
 void setup() 
 {
   Serial.begin(115200);
+
+  Wire.begin();
   
   Serial.println("Initializing the LSM9DS1");
   uint16_t status = initLSM9DS1();

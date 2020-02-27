@@ -23,7 +23,7 @@ Distributed as-is; no warranty is given.
 
 #define AUX_LED_PIN 13
 
-HardwareSerial Serial1(2);  // UART1/Serial1 pins 16,17
+HardwareSerial GPSUART(2);  // Set up GPS UART on pins 16 & 17
 
 #define PRINT_SPEED 250 // 250 ms between prints
 static unsigned long lastPrint = 0; // Keep track of print time
@@ -33,7 +33,7 @@ void setup(){
 	digitalWrite(AUX_LED_PIN, 0);
 	
     Serial.begin(115200);
-	Serial1.begin(9600);
+	GPSUART.begin(9600);
 }
 
 int parsingState = 0;
@@ -50,9 +50,9 @@ void loop(){
 			parsingState = 1;
 		break;
 		case 1:
-			if(Serial1.available())
+			if(GPSUART.available())
 			{
-				char c = Serial1.read();
+				char c = GPSUART.read();
 				if(c == '$') //Is char the first char?
 				{
 					//detected end

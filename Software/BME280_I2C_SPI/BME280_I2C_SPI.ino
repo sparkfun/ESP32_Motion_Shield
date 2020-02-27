@@ -34,7 +34,6 @@ Distributed as-is; no warranty is given.
 #include "Wire.h"
 #include "SPI.h"
 
-#define BME280_CS_PIN 17
 
 //Global sensor object
 BME280 mySensor;
@@ -43,36 +42,26 @@ unsigned int sampleNumber = 0; //For counting number of CSV rows
 
 void setup()
 {
-	//***Driver settings********************************//
-	//  commInterface can be I2C_MODE or SPI_MODE.
-		
-	//For I2C, enable the following and disable the SPI section.
-	//I2CAddress can be 0x77(default) or 0x76.
-	//mySensor.settings.commInterface = I2C_MODE;
-	//mySensor.settings.I2CAddress = 0x77;	
-	
-	//For SPI enable the following and dissable the I2C section.
-	//set chipSelectPin using arduino pin names.
-	mySensor.settings.commInterface = SPI_MODE;
-	mySensor.settings.chipSelectPin = BME280_CS_PIN;
+	Wire.begin();
+			
+	// For SPI, enable the "mySensor.beginSPI(10)" line and disable the "mySensor.beginI2C()" line.
+  if (mySensor.beginI2C() == false) //Begin communication over I2C.
+  //if (mySensor.beginSPI(17) == false) //Begin communication over SPI. Use pin 17 as Chip Select.
+  {
+    Serial.println("The sensor did not respond. Please check wiring.");
+    while(1); //Freeze
+  }
 
 
-	//***Operation settings*****************************//
-	mySensor.settings.runMode = 3; //  3, Normal mode
-	mySensor.settings.tStandby = 0; //  0, 0.5ms
-	mySensor.settings.filter = 0; //  0, filter off
-	//tempOverSample can be:
-	//  0, skipped
-	//  1 through 5, oversampling *1, *2, *4, *8, *16 respectively
-	mySensor.settings.tempOverSample = 1;
-	//pressOverSample can be:
-	//  0, skipped
-	//  1 through 5, oversampling *1, *2, *4, *8, *16 respectively
-    mySensor.settings.pressOverSample = 1;
-	//humidOverSample can be:
-	//  0, skipped
-	//  1 through 5, oversampling *1, *2, *4, *8, *16 respectively
-	mySensor.settings.humidOverSample = 1;
+	//***BME280 Operation settings*****************************//
+	mySensor.setFilter(1); //0 to 4 is valid. Filter coefficient. See 3.4.4
+  mySensor.setStandbyTime(0); //0 to 7 valid. Time between readings. See table 27.
+
+  mySensor.setTempOverSample(1); //0 to 16 are valid. 0 disables temp sensing. See table 24.
+  mySensor.setPressureOverSample(1); //0 to 16 are valid. 0 disables pressure sensing. See table 23.
+  mySensor.setHumidityOverSample(1); //0 to 16 are valid. 0 disables humidity sensing. See table 19.
+  
+  mySensor.setMode(MODE_NORMAL); //MODE_SLEEP, MODE_FORCED, MODE_NORMAL is valid. See 3.3
 	
 	Serial.begin(115200);
 	Serial.print("Program Started\n");

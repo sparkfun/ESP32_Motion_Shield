@@ -50,10 +50,10 @@ void setup()
   Serial.begin(115200);
   
   // Configure LSM9DS1 library parameters
-  imu.settings.device.commInterface = IMU_MODE_I2C;
+  /*imu.settings.device.commInterface = IMU_MODE_I2C;
   imu.settings.device.mAddress = LSM9DS1_M;
   imu.settings.device.agAddress = LSM9DS1_AG;
-  imu.settings.mag.scale = 2;
+  imu.settings.mag.scale = 2;*/
   // The above lines will only take effect AFTER calling
   // imu.begin(), which verifies communication with the IMU
   // and turns it on.
@@ -63,12 +63,17 @@ void setup()
   Serial.println("Starting Sketch");
 
   delay(100);
-  if (!imu.begin())
+  Wire.begin();
+
+  if (imu.begin() == false) // with no arguments, this uses default addresses (AG:0x6B, M:0x1E) and i2c port (Wire).
   {
     Serial.println("Failed to communicate with LSM9DS1.");
-    Serial.println("Double-check connections.");
-    while (1)
-      ;
+    Serial.println("Double-check wiring.");
+    Serial.println("Default settings in this sketch will " \
+                   "work for an out of the box LSM9DS1 " \
+                   "Breakout, but may need to be modified " \
+                   "if the board jumpers are.");
+    while (1);
   }
   
 }

@@ -46,7 +46,7 @@ Distributed as-is; no warranty is given.
 #define AUX_LED_PIN 13
 #define ESP_LED_PIN 5
 
-HardwareSerial Serial1(2);  // UART1/Serial1 pins 16,17
+HardwareSerial GPSUART(2);  // Set up GPS UART on pins 16 & 17
 
 FileSerial GPSLogFile(&Serial);
 FileSerial IMULogFile(&Serial);
@@ -82,36 +82,24 @@ void setup(){
 	delay(500);
 	
     Serial.begin(115200);
-	Serial1.begin(9600);
-	
-	//IMU
-	// Configure LSM9DS1 library parameters
-	imu.settings.device.commInterface = IMU_MODE_I2C;
-	imu.settings.device.mAddress = LSM9DS1_M;
-	imu.settings.device.agAddress = LSM9DS1_AG;
-	imu.settings.mag.scale = 2;
-	// The above lines will only take effect AFTER calling
-	// imu.begin(), which verifies communication with the IMU
-	// and turns it on.
-	
-	
-	
+	GPSUART.begin(9600);
 	delay(1000);
 	Serial.println("Starting Sketch");
 	
 	delay(100);
-	if (!imu.begin())
-	{
-		Serial.println("Failed to communicate with LSM9DS1.");
-		Serial.println("Double-check wiring.");
-		Serial.println("Default settings in this sketch will " \
-						"work for an out of the box LSM9DS1 " \
-						"Breakout, but may need to be modified " \
-						"if the board jumpers are.");
-		digitalWrite(ESP_LED_PIN, 0);
-		
-		while (1);
-	}
+  Wire.begin();
+
+  if (imu.begin() == false) // with no arguments, this uses default addresses (AG:0x6B, M:0x1E) and i2c port (Wire).
+  {
+    Serial.println("Failed to communicate with LSM9DS1.");
+    Serial.println("Double-check wiring.");
+    Serial.println("Default settings in this sketch will " \
+                   "work for an out of the box LSM9DS1 " \
+                   "Breakout, but may need to be modified " \
+                   "if the board jumpers are.");
+    digitalWrite(ESP_LED_PIN, 0);
+    while (1);
+  }
   
     if(!SD.begin(33, SPI, 10000000, "/sd")){
         Serial.println("Card Mount Failed");
@@ -183,9 +171,9 @@ void loop(){
 			parsingState = 1;
 		break;
 		case 1:
-			if(Serial1.available())
+			if(GPSUART.available())
 			{
-				char c = Serial1.read();
+				char c = GPSUART.read();
 				if(c == '$')
 				{
 					//detected end
